@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './theme-toggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,6 +28,8 @@ const Navbar = () => {
     { name: 'Skills', id: 'skills' },
     { name: 'Experience', id: 'experience' },
     { name: 'Projects', id: 'projects' },
+    { name: 'Achievements', id: 'achievements' },
+    { name: 'Certifications', id: 'certifications' },
     { name: 'Education', id: 'education' },
     { name: 'Contact', id: 'contact' },
   ];
@@ -60,13 +63,16 @@ const Navbar = () => {
                 {link.name}
               </button>
             ))}
-            <Button
-              className="btn-hero ml-4"
-              onClick={() => window.open('#', '_blank')}
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Resume
-            </Button>
+            <div className="flex items-center gap-4 ml-4">
+              <ThemeToggle />
+              <Button
+                className="btn-hero"
+                onClick={() => window.open('#', '_blank')}
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Resume
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,13 +97,16 @@ const Navbar = () => {
                   {link.name}
                 </button>
               ))}
-              <Button
-                className="btn-hero w-fit"
-                onClick={() => window.open('#', '_blank')}
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Resume
-              </Button>
+              <div className="flex items-center gap-2 pt-4 border-t border-border">
+                <ThemeToggle />
+                <Button
+                  className="btn-hero flex-1 justify-center"
+                  onClick={() => window.open('#', '_blank')}
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Resume
+                </Button>
+              </div>
             </div>
           </div>
         )}

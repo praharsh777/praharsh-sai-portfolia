@@ -13,86 +13,40 @@ const Skills = () => {
     {
       icon: Code,
       title: 'Programming & Development',
-      color: 'from-primary to-accent',
-      skills: [
-        { name: 'Python', level: 95 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'Java', level: 85 },
-        { name: 'React.js', level: 92 },
-        { name: 'Node.js', level: 88 },
-        { name: 'Flask', level: 85 }
-      ]
+      skills: ['Python', 'JavaScript', 'Java', 'C', 'SQL', 'React.js', 'Node.js', 'Flask']
     },
     {
       icon: Brain,
       title: 'AI & Machine Learning',
-      color: 'from-secondary to-accent',
-      skills: [
-        { name: 'TensorFlow', level: 90 },
-        { name: 'Scikit-learn', level: 88 },
-        { name: 'OpenCV', level: 85 },
-        { name: 'Pandas & NumPy', level: 92 },
-        { name: 'Data Analysis', level: 90 },
-        { name: 'Deep Learning', level: 85 }
-      ]
+      skills: ['TensorFlow', 'Scikit-learn', 'OpenCV', 'Pandas', 'NumPy', 'Deep Learning', 'Data Analysis']
     },
     {
       icon: Database,
       title: 'Data & Backend',
-      color: 'from-accent to-primary',
-      skills: [
-        { name: 'SQL', level: 90 },
-        { name: 'MySQL', level: 88 },
-        { name: 'SQLite', level: 85 },
-        { name: 'RESTful APIs', level: 90 },
-        { name: 'Web Scraping', level: 92 },
-        { name: 'System Design', level: 80 }
-      ]
+      skills: ['MySQL', 'SQLite', 'RESTful APIs', 'Web Scraping', 'System Design', 'Blockchain']
     },
     {
       icon: Cloud,
       title: 'Cloud & DevOps',
-      color: 'from-primary to-secondary',
-      skills: [
-        { name: 'Google Cloud Platform', level: 85 },
-        { name: 'Git & GitHub', level: 95 },
-        { name: 'Docker', level: 75 },
-        { name: 'CI/CD', level: 70 },
-        { name: 'Cloud Functions', level: 80 },
-        { name: 'Deployment', level: 85 }
-      ]
+      skills: ['Google Cloud Platform', 'Git & GitHub', 'Docker', 'CI/CD', 'Cloud Functions']
     },
     {
       icon: Palette,
       title: 'Tools & Visualization',
-      color: 'from-secondary to-primary',
-      skills: [
-        { name: 'Power BI', level: 85 },
-        { name: 'Tableau', level: 80 },
-        { name: 'Matplotlib', level: 90 },
-        { name: 'Streamlit', level: 88 },
-        { name: 'Jupyter Notebook', level: 95 },
-        { name: 'VS Code', level: 98 }
-      ]
+      skills: ['Power BI', 'Tableau', 'Matplotlib', 'Streamlit', 'Jupyter Notebook', 'VS Code']
     },
     {
       icon: Users,
       title: 'Soft Skills',
-      color: 'from-accent to-secondary',
-      skills: [
-        { name: 'Problem Solving', level: 95 },
-        { name: 'Team Collaboration', level: 90 },
-        { name: 'Communication', level: 88 },
-        { name: 'Agile Methodology', level: 85 },
-        { name: 'Leadership', level: 82 },
-        { name: 'Adaptability', level: 90 }
-      ]
+      skills: ['Problem Solving', 'Team Collaboration', 'Communication', 'Agile Methodology', 'Leadership', 'Adaptability']
     }
   ];
 
-  const technologies = [
-    'Python', 'JavaScript', 'React.js', 'Node.js', 'TensorFlow', 'OpenCV',
-    'Flask', 'SQL', 'GCP', 'Docker', 'Git', 'Power BI', 'Pandas', 'NumPy'
+  const expertiseAreas = [
+    { name: 'Full-Stack Development', icon: Code, percentage: 90 },
+    { name: 'AI & Machine Learning', icon: Brain, percentage: 88 },
+    { name: 'Cloud Architecture', icon: Cloud, percentage: 85 },
+    { name: 'Data Science', icon: Database, percentage: 92 }
   ];
 
   return (
@@ -109,63 +63,81 @@ const Skills = () => {
             </p>
           </div>
 
-          {/* Skills Grid */}
+          {/* Expertise Overview */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {expertiseAreas.map((area, index) => (
+              <div 
+                key={index}
+                className="text-center fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative w-32 h-32 mx-auto mb-6">
+                  <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 120 120">
+                    <circle
+                      cx="60"
+                      cy="60"
+                      r="50"
+                      stroke="hsl(var(--muted))"
+                      strokeWidth="8"
+                      fill="transparent"
+                    />
+                    <circle
+                      cx="60"
+                      cy="60"
+                      r="50"
+                      stroke="hsl(var(--primary))"
+                      strokeWidth="8"
+                      fill="transparent"
+                      strokeDasharray={`${2 * Math.PI * 50}`}
+                      strokeDashoffset={`${2 * Math.PI * 50 * (1 - area.percentage / 100)}`}
+                      strokeLinecap="round"
+                      className="transition-all duration-1000 ease-out"
+                    />
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <area.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-bold text-primary">
+                    {area.percentage}%
+                  </div>
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{area.name}</h3>
+              </div>
+            ))}
+          </div>
+
+          {/* Skills Categories */}
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
             {skillCategories.map((category, categoryIndex) => (
               <div 
                 key={categoryIndex}
-                className="card-elevated hover-lift p-6"
+                className="card-elevated hover-lift p-8"
                 style={{ animationDelay: `${categoryIndex * 0.1}s` }}
               >
                 <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
-                    <category.icon className="w-6 h-6 text-white" />
+                  <div className="p-4 rounded-2xl bg-gradient-primary mr-4">
+                    <category.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="heading-md">{category.title}</h3>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="group">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-medium text-sm">{skill.name}</span>
-                        <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-muted rounded-full h-2">
-                        <div 
-                          className={`h-2 rounded-full bg-gradient-to-r ${category.color} transition-all duration-1000 ease-out`}
-                          style={{ 
-                            width: `${skill.level}%`,
-                            animationDelay: `${(categoryIndex * 6 + skillIndex) * 0.1}s`
-                          }}
-                        />
-                      </div>
-                    </div>
+                    <span
+                      key={skillIndex}
+                      className="px-3 py-2 bg-muted/50 text-foreground rounded-lg text-sm font-medium hover:bg-primary/10 hover:text-primary transition-all cursor-default border border-border/50 hover:border-primary/30"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Technology Tags */}
-          <div className="fade-in">
-            <h3 className="heading-lg text-center mb-8">Technologies I Work With</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="px-4 py-2 bg-gradient-to-r from-primary/10 to-accent/10 text-primary border border-primary/20 rounded-full font-medium text-sm hover:bg-gradient-to-r hover:from-primary/20 hover:to-accent/20 transition-all hover-lift cursor-default"
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-
           {/* Call to Action */}
-          <div className="text-center mt-16 fade-in">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-card rounded-2xl border border-border">
+          <div className="text-center fade-in">
+            <div className="inline-flex items-center px-6 py-4 bg-gradient-card rounded-2xl border border-border">
               <span className="text-muted-foreground mr-2">Always learning and exploring new technologies</span>
               <ChevronRight className="w-4 h-4 text-primary" />
             </div>
