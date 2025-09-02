@@ -59,18 +59,19 @@ const Hero = () => {
               <ExternalLink className="w-5 h-5 ml-2" />
             </Button>
             
-            <Button
-              onClick={() => window.open('#', '_blank')}
+          <Button
+              onClick={() => scrollToSection('about')}
               className="btn-outline text-white border-white hover:bg-white hover:text-primary-dark text-lg px-8 py-4"
             >
-              Download Resume
+              Get to Know Me
             </Button>
+
           </div>
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-16">
             <a
-              href="https://linkedin.com/in/m-praharsh-sai"
+              href="https://www.linkedin.com/in/m-praharsh-sai-77b1ab275/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-dark hover:bg-white/20 transition-all hover-lift"
@@ -78,7 +79,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6 text-white" />
             </a>
             <a
-              href="https://github.com/praharshsai"
+              href="https://github.com/praharsh777"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-dark hover:bg-white/20 transition-all hover-lift"

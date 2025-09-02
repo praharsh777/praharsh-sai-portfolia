@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, InstagramIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,15 +24,25 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+  try {
+   await emailjs.send(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  {
+    name: formData.name,
+    email: formData.email,
+    subject: formData.subject,
+    message: formData.message,
+  },
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY // ✅ Pass directly as string
+);
 
     toast({
-      title: "Message sent!",
+      title: 'Message sent!',
       description: "Thank you for reaching out. I'll get back to you soon!",
     });
 
@@ -41,8 +52,18 @@ const Contact = () => {
       subject: '',
       message: ''
     });
+  } catch (err) {
+    console.error(err);
+    toast({
+      title: 'Oops!',
+      description: 'Something went wrong. Please try again later.',
+      variant: 'destructive',
+    });
+  } finally {
     setIsSubmitting(false);
-  };
+  }
+};
+
 
   const contactInfo = [
     {
@@ -69,21 +90,22 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/m-praharsh-sai',
+      href: 'https://www.linkedin.com/in/m-praharsh-sai-77b1ab275/',
       color: 'hover:text-blue-600'
     },
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/praharshsai',
+      href: 'https://github.com/praharsh777',
       color: 'hover:text-gray-800'
     },
-    {
-      icon: ExternalLink,
-      label: 'Portfolio',
-      href: '#',
-      color: 'hover:text-primary'
-    }
+{
+  icon: InstagramIcon,
+  label: 'Instagram',
+  href: 'https://www.instagram.com/m_praharsh777/?next=%2F',
+  color: 'hover:text-primary'
+}
+
   ];
 
   return (

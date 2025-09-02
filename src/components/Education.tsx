@@ -29,7 +29,23 @@ const Education = () => {
         'Participated in science olympiads and competitions',
         'Leadership roles in student activities'
       ]
-    }
+    },
+    {
+      degree: 'Secondary School ',
+      institution: 'Bhashyam High School',
+      location: 'Visakhapatnam, India',
+      duration: 'November 2020 - August 2022',
+      gpa: '10.00',
+      status: 'Completed',
+      highlights: [
+      'Built strong foundation in Mathematics and Science',
+      'Explored basics of Social Studies and History',
+      'Developed analytical and logical thinking skills',
+      'Actively participated in school-level projects and competitions'
+    ]
+
+    },
+
   ];
 
   const relevantCourses = [

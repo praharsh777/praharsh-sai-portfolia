@@ -10,12 +10,12 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/m-praharsh-sai',
+      href: 'https://www.linkedin.com/in/m-praharsh-sai-77b1ab275/',
       label: 'LinkedIn'
     },
     {
       icon: Github,
-      href: 'https://github.com/praharshsai',
+      href: 'https://github.com/praharsh777',
       label: 'GitHub'
     },
     {

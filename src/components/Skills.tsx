@@ -5,7 +5,8 @@ import {
   Palette, 
   Cloud, 
   Users,
-  ChevronRight
+  ChevronRight,
+  Blocks
 } from 'lucide-react';
 
 const Skills = () => {
@@ -28,7 +29,7 @@ const Skills = () => {
     {
       icon: Cloud,
       title: 'Cloud & DevOps',
-      skills: ['Google Cloud Platform', 'Git & GitHub', 'Docker', 'CI/CD', 'Cloud Functions']
+      skills: ['Google Cloud Platform', 'Git & GitHub', 'Docker', 'CI/CD', 'Cloud Functions', 'Oracle Cloud Infrastructure']
     },
     {
       icon: Palette,
@@ -46,7 +47,8 @@ const Skills = () => {
     { name: 'Full-Stack Development', icon: Code, percentage: 90 },
     { name: 'AI & Machine Learning', icon: Brain, percentage: 88 },
     { name: 'Cloud Architecture', icon: Cloud, percentage: 85 },
-    { name: 'Data Science', icon: Database, percentage: 92 }
+    { name: 'Data Science', icon: Database, percentage: 92 },
+    { name: 'Block Chain', icon:   Blocks, percentage: 70 }
   ];
 
   return (

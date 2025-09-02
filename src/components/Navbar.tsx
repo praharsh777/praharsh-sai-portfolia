@@ -65,13 +65,7 @@ const Navbar = () => {
             ))}
             <div className="flex items-center gap-4 ml-4">
               <ThemeToggle />
-              <Button
-                className="btn-hero"
-                onClick={() => window.open('#', '_blank')}
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Resume
-              </Button>
+             
             </div>
           </div>
 
@@ -99,13 +93,7 @@ const Navbar = () => {
               ))}
               <div className="flex items-center gap-2 pt-4 border-t border-border">
                 <ThemeToggle />
-                <Button
-                  className="btn-hero flex-1 justify-center"
-                  onClick={() => window.open('#', '_blank')}
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Resume
-                </Button>
+
               </div>
             </div>
           </div>

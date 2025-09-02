@@ -58,19 +58,19 @@ const Achievements = () => {
   const stats = [
     {
       icon: Target,
-      value: '200+',
+      value: '300+',
       label: 'Problems Solved',
       platforms: 'LeetCode, GeeksforGeeks, HackerRank, CodeNinjas'
     },
     {
       icon: BookOpen,
-      value: '10+',
+      value: '15+',
       label: 'Certifications',
       platforms: 'Harvard, Stanford, IIT-NPTEL'
     },
     {
       icon: Star,
-      value: '5+',
+      value: '10+',
       label: 'Major Projects',
       platforms: 'AI, Web Development, Data Science'
     }
@@ -167,51 +167,7 @@ const Achievements = () => {
             </div>
           </div>
 
-          {/* Certifications */}
-          <div className="fade-in">
-            <h3 className="heading-lg text-center mb-12">Professional Certifications</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              {certifications.map((cert, index) => (
-                <div 
-                  key={index}
-                  className="flex items-start p-6 bg-gradient-card rounded-xl border border-border hover-lift group"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                    <BookOpen className="w-6 h-6 text-white" />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-2">
-                      <h4 className="font-semibold text-lg group-hover:text-primary transition-colors">
-                        {cert.title}
-                      </h4>
-                      <span className="text-xs text-muted-foreground font-medium px-2 py-1 bg-muted rounded-full ml-2">
-                        {cert.year}
-                      </span>
-                    </div>
-                    
-                    <div className="text-accent font-medium text-sm mb-2">
-                      {cert.issuer}
-                    </div>
-                    
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {cert.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-16 fade-in">
-            <div className="inline-flex items-center px-6 py-4 bg-gradient-card rounded-2xl border border-border">
-              <span className="text-muted-foreground">
-                Continuously learning and pushing boundaries in technology
-              </span>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

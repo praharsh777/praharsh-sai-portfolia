@@ -95,11 +95,11 @@ const About = () => {
           <div className="mt-20 fade-in">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="heading-lg text-gradient-primary mb-2">200+</div>
+                <div className="heading-lg text-gradient-primary mb-2">300+</div>
                 <div className="text-muted-foreground">Problems Solved</div>
               </div>
               <div className="text-center">
-                <div className="heading-lg text-gradient-primary mb-2">5+</div>
+                <div className="heading-lg text-gradient-primary mb-2">10+</div>
                 <div className="text-muted-foreground">Major Projects</div>
               </div>
               <div className="text-center">
@@ -107,7 +107,7 @@ const About = () => {
                 <div className="text-muted-foreground">Current GPA</div>
               </div>
               <div className="text-center">
-                <div className="heading-lg text-gradient-primary mb-2">10+</div>
+                <div className="heading-lg text-gradient-primary mb-2">15+</div>
                 <div className="text-muted-foreground">Certifications</div>
               </div>
             </div>
