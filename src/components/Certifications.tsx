@@ -130,6 +130,14 @@ const Certifications = () => {
   date: '2024',
   image: '/visesh.jpg',
   description: 'Secured 2nd place in coding event at intercollegiate fest'
+},
+{
+  id: 17,
+  title: 'Oracle Cloud Infrastructure 2025 Certified Generative AI Professional',
+  issuer: 'Oracle University',
+  date: '2025',
+  image: '/oracle.jpg', 
+  description: 'Achieved Oracle Certified Professional credential specializing in Cloud Infrastructure and Generative AI.'
 }
 
 
