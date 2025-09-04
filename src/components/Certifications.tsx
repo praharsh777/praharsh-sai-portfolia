@@ -3,12 +3,12 @@ import { Award, ExternalLink, Calendar } from 'lucide-react';
 const Certifications = () => {
   // Placeholder certificates - users can replace with actual certificate images
   const certificates = [
-    {
+ {
   id: 1,
   title: 'CS50P: Python Programming',
   issuer: 'Harvard University',
   date: '2024',
-  image: '/images/CS50P.png',
+  image: '/CS50P.png',
   description: 'Core Python concepts and programming fundamentals'
 },
 {
@@ -16,7 +16,7 @@ const Certifications = () => {
   title: 'Machine Learning Specialization',
   issuer: 'Stanford & DeepLearning.AI',
   date: '2024',
-  image: '/images/ML-Stanford.jpg',
+  image: '/ML-Stanford.jpg',
   description: 'Supervised & Unsupervised Machine Learning'
 },
 {
@@ -24,7 +24,7 @@ const Certifications = () => {
   title: 'Data Structures and Algorithms',
   issuer: 'IIT-NPTEL',
   date: '2024',
-  image: '/images/dsa.jpg',
+  image: '/dsa.jpg',
   description: 'Advanced DSA concepts using Python'
 },
 {
@@ -32,7 +32,7 @@ const Certifications = () => {
   title: 'Database Management Systems',
   issuer: 'IIT-NPTEL',
   date: '2024',
-  image: '/images/dbms.jpg',
+  image: '/dbms.jpg',
   description: 'Database design, SQL, and management principles'
 },
 {
@@ -40,7 +40,7 @@ const Certifications = () => {
   title: 'AI Project Certification',
   issuer: 'Shirdi Dwarakamayi 369 Innovations in Partnership RTP, NIRD&PR, Ministry of Rural Development, Government of India.',
   date: '2024',
-  image: '/images/chary1.jpg',
+  image: '/chary1.jpg',
   description: 'AI BASED SIGN LANGUAGE TRANSLATOR'
 },
 {
@@ -48,7 +48,7 @@ const Certifications = () => {
   title: 'Microsoft Azure AI Fundamentals',
   issuer: 'Microsoft',
   date: '2025',
-  image: '/images/azure.jpg',
+  image: '/azure.jpg',
   description: 'Azure AI fundamentals certification by Microsoft'
 },
 {
@@ -56,7 +56,7 @@ const Certifications = () => {
   title: 'Alison Communication Certification',
   issuer: 'Alison',
   date: '2024',
-  image: '/images/english.jpeg',
+  image: '/english.jpeg',
   description: 'Winning with communication certification'
 },
 {
@@ -64,7 +64,7 @@ const Certifications = () => {
   title: 'AI Project Certification',
   issuer: 'Shirdi Dwarakamayi 369 Innovations in Partnership RTP, NIRD&PR, Ministry of Rural Development, Government of India.',
   date: '2024',
-  image: '/images/chary2.jpg',
+  image: '/chary2.jpg',
   description: 'AI BASED SOCIAL MEDIA TREND ANALYZER'
 },
 {
@@ -72,7 +72,7 @@ const Certifications = () => {
   title: 'C Programming Workshop Certification',
   issuer: 'Skilltimate',
   date: '2024',
-  image: '/images/C-Skilltimate.jpg',
+  image: '/C-Skilltimate.jpg',
   description: 'Completed a comprehensive workshop on C programming'
 },
 {
@@ -80,7 +80,7 @@ const Certifications = () => {
   title: 'C Programming Language Certification',
   issuer: 'Tutorscampus',
   date: '2023',
-  image: '/images/C-TC.jpg',
+  image: '/C-TC.jpg',
   description: 'Completed a comprehensive course on C programming'
 },
 {
@@ -88,7 +88,7 @@ const Certifications = () => {
   title: 'Software Engineering Job Simulation Certification',
   issuer: 'Goldman Sachs & Forage',
   date: '2025',
-  image: '/images/goldmansaches.jpg',
+  image: '/goldmansaches.jpg',
   description: 'Completed a job simulation on software engineering'
 },
 {
@@ -96,7 +96,7 @@ const Certifications = () => {
   title: 'Hackathon Winning Certificate',
   issuer: 'Intercollegiate Hackathon',
   date: '2024',
-  image: '/images/hackathon.jpg',
+  image: '/hackathon.jpg',
   description: 'Won first prize in intercollegiate data science hackathon'
 },
 {
@@ -104,7 +104,7 @@ const Certifications = () => {
   title: 'Data Science & Analytics',
   issuer: 'HP Life & HP Foundation',
   date: '2024',
-  image: '/images/hp.jpg',
+  image: '/hp.jpg',
   description: 'Completed a comprehensive course on Data Science & Analytics'
 },
 {
@@ -112,7 +112,7 @@ const Certifications = () => {
   title: 'Internship Common Aptitude Test',
   issuer: 'ICAT',
   date: '2024',
-  image: '/images/icat.png',
+  image: '/icat.png',
   description: 'Scored 90 percentile in ICAT among 1 lakh+ students'
 },
 {
@@ -120,7 +120,7 @@ const Certifications = () => {
   title: 'Python Programming Certification',
   issuer: 'Skilltimate',
   date: '2023',
-  image: '/images/python-skilltimate.jpg',
+  image: '/python-skilltimate.jpg',
   description: 'Completed a comprehensive course on Python programming'
 },
 {
@@ -128,9 +128,10 @@ const Certifications = () => {
   title: 'Vishesh Intercollegiate Event',
   issuer: 'Intercollegiate Event',
   date: '2024',
-  image: '/images/visesh.jpg',
+  image: '/visesh.jpg',
   description: 'Secured 2nd place in coding event at intercollegiate fest'
 }
+
 
   ];
 
